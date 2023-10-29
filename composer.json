@@ -1,0 +1,41 @@
+{
+    "name": "hiraeth/cache",
+    "description": "Caching provided by Symfony for the Hiraeth Nano Framework",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "license": "MIT",
+    "authors": [
+        {
+            "name":  "Matthew J. Sahagian",
+            "email": "matthew.sahagian@gmail.com",
+            "role":  "Lead Architect / Developer"
+        }
+    ],
+    "provide": {
+        "hiraeth/caching-imp": "^3.0"
+    },
+    "autoload": {
+        "classmap": ["src/"]
+    },
+    "require": {
+        "hiraeth/caching": "^3.0",
+        "symfony/cache": "^7.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.0",
+        "phpunit/phpunit": "^10.0"
+    },
+    "type": "opus-package",
+    "extra": {
+        "opus": {
+            "hiraeth/app": {
+                "config": ""
+            }
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "imarc/opus": true
+        }
+    }
+}

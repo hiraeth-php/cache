@@ -1,0 +1,25 @@
+[cache]
+
+	;
+	;
+	;
+
+	disabled = false
+
+	;
+	;
+	;
+
+	class = Symfony\Component\Cache\Adapter\FilesystemAdapter
+
+	;
+	; Options ma
+	;
+
+	[&.options]
+
+		;
+		; When using the filesystem adapter, this is where data will be stored
+		;
+
+		directory = dir(storage/cache/data)
