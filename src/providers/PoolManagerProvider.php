@@ -3,6 +3,7 @@
 namespace Hiraeth\Cache;
 
 use Hiraeth;
+use Hiraeth\Caching\PoolManager;
 use Symfony\Component\Cache\Adapter\ArrayAdapter;
 use Symfony\Component\Cache\Adapter\ChainAdapter;
 use RuntimeException;
@@ -18,7 +19,7 @@ class PoolManagerProvider implements Hiraeth\Provider
 	static public function getInterfaces(): array
 	{
 		return [
-			Hiraeth\Caching\PoolManager::class
+			PoolManager::class
 		];
 	}
 
@@ -26,7 +27,7 @@ class PoolManagerProvider implements Hiraeth\Provider
 	/**
 	 * {@inheritDoc}
 	 *
-	 * @param Caching\PoolManager $instance
+	 * @param PoolManager $instance
 	 */
 	public function __invoke(object $instance, Hiraeth\Application $app): object
 	{
