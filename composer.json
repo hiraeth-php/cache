@@ -16,7 +16,7 @@
     },
     "require": {
         "hiraeth/caching": "^3.0",
-        "symfony/cache": "^7.0"
+        "symfony/cache": "^6.0"
     },
     "require-dev": {
         "phpstan/phpstan": "^1.0",
