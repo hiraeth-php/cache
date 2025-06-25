@@ -54,7 +54,11 @@ class PoolManagerProvider implements Hiraeth\Provider
 			}
 
 			if (!$config['disabled']) {
-				$drivers[] = $app->get($config['class'], $config['options']);
+				$driver = $app->get($config['class'], $config['options']);
+
+				$driver->setLogger($app);
+
+				$drivers[] = $driver;
 			}
 
 			$instance->add($name, new ChainAdapter($drivers + [$ephemeral]));
